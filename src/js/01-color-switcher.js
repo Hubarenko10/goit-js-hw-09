@@ -14,7 +14,7 @@ startBtn.addEventListener("click", () => {
         const randomColor = getRandomHexColor();
         body.style.background = randomColor;
     
-    }, 5000);
+    }, 1000);
     
 });
 stopBtn.addEventListener("click", () => {
