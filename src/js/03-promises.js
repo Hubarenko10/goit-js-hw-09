@@ -23,16 +23,12 @@ submit.addEventListener('click', e => {
   let firstDelay = Number(delay.value);
   let delayStep = Number(step.value);
   for (let i = 0; i < amount.value; i++) {
-    createPromise(1 + i, firstDelay + i * delayStep)
+      createPromise(1 + i, firstDelay + i * delayStep)
       .then(({ position, delay }) => {
-        Notify.success(
-          `Fulfilled promise ${position} in ${delay}ms`
-        );
+        Notify.success(`Fulfilled promise ${position} in ${delay}ms`);
       })
       .catch(({ position, delay }) => {
-        Notify.failure(
-          `Rejected promise ${position} in ${delay}ms`
-        );
+        Notify.failure(`Rejected promise ${position} in ${delay}ms`);
       });
   }
 });
